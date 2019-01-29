@@ -1,0 +1,28 @@
+#include "../public/CommonBase.tars"
+
+
+module Common
+{
+
+struct IPGeoReq
+{
+    0 require long lAppid;          // APPID
+    1 require long lTimestamp;      // 毫秒级的时间戳
+    2 optional string sQueryIP;     // 留空则自动查询请求的IP（X-Forwarded-For），不留空则查询所填写的IP
+};
+
+struct IPGeoRsp
+{
+    0 require ReturnCode tStatus;       // 返回值
+    1 require string sDescription;      // 错误时的描述
+    2 require string sCountryShortName; // 国家/地区的简称
+    3 require string sCountryFullName;  // 国家/地区的全称
+};
+
+interface IPGeoServant
+{
+    int test();
+    int getIPGeo(IPGeoReq req,out IPGeoRsp rsp);
+};
+
+}; 
