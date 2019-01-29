@@ -1,0 +1,4 @@
+test/build
+*.so
+test.dSYM
+.DS_Store

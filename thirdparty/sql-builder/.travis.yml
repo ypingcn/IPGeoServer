@@ -1,0 +1,15 @@
+language: cpp
+
+os:
+    - linux
+
+env:
+    - CONFIG=Release
+    - CONFIG=Debug
+
+compiler:
+    - clang
+
+script:
+    - make all
+    - make test

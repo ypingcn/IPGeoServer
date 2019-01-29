@@ -1,0 +1,3 @@
+[submodule "thirdparty/sql-builder"]
+	path = thirdparty/sql-builder
+	url = https://github.com/ypingcn/sql-builder.git
