@@ -1,0 +1,13 @@
+module Common
+{
+    enum ReturnCode
+    {
+        eOk = 0,                // 正确处理
+        eUnknownError = -1,     // 未知错误
+        eOtherError = -2,       // 其他错误
+        eArgError = -3,         // 参数错误
+        eDbError = -4,          // 数据库错误
+        eAppidError = -5,       // APPID 错误
+        eTimestampError = -6   // 时间戳错误
+    };
+};
